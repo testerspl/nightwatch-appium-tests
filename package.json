@@ -1,0 +1,18 @@
+{
+  "name": "appium_project_js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx nightwatch tests/wikipedia-android-tests.js --env app.android.emulator"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nightwatch/mobile-helper": "^1.0.0",
+    "appium": "^2.0.1",
+    "appium-uiautomator2-driver": "^3.9.0",
+    "nightwatch": "^3.9.0"
+  }
+}
