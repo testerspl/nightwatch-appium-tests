@@ -5,7 +5,6 @@ describe('Wikipedia Android app test', function () {
 
 	it('Search for BrowserStack', async function (app) {
 		app
-
 			.click('id', 'org.wikipedia:id/search_container')
 			.sendKeys('id', 'org.wikipedia:id/search_src_text', 'browserstack')
 
@@ -22,13 +21,22 @@ describe('Wikipedia Android app test', function () {
 			})
 			.appium.setContext('WEBVIEW_org.wikipedia')
 
-			// .debug() //Added debug command. The inspector will be at a state where previous step is executed
+			.debug() //Added debug command. The inspector will be at a state where previous step is executed
 			.assert.textEquals(
 				{
 					selector: '//android.webkit.WebView[@text="BrowserStack"]',
-					locateStrategy: 'xpath',
+					locateStrategy: 'css',
 				},
 				'BrowserStack'
 			); // command run in webview context
 	});
 });
+
+
+// AndroidDriver.findElement(By id).click()
+
+// driver.findElement(By id).assert.textEquals
+
+
+
+//android.view.ViewGroup[@resource-id="org.wikipedia:id/page_contents_container"]/android.webkit.WebView
